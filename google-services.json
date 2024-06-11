@@ -1,0 +1,54 @@
+{
+  "project_info": {
+    "project_number": "315016896909",
+    "project_id": "gsrc-app",
+    "storage_bucket": "gsrc-app.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:315016896909:android:c8d693f1624dc902a49dc4",
+        "android_client_info": {
+          "package_name": "com.grangerowing.GSRCApp"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "315016896909-bmhl7tum2o3msbgc7d6g2r8n12aeqn4r.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.grangerowing.GSRCApp",
+            "certificate_hash": "5a2a5f8e443598f3636d8a63c3d947efa4aa1b72"
+          }
+        },
+        {
+          "client_id": "315016896909-adfqrc7plt7ohlrr1m66ih0mqkr12hni.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyA1fiqDLD2v7lVKGcCqPY_G2dmWOLP8CW8"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "315016896909-adfqrc7plt7ohlrr1m66ih0mqkr12hni.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "315016896909-2og0r2uq6rv19ppdp12j168gmu0krumd.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.grangerowing.GSRC-App"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
