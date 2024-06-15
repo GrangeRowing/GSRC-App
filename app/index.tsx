@@ -131,7 +131,7 @@ export default function Index() {
 
           <Button
             url={'https://www.grangerowing.com/shop-4'}
-            imageUri={require('../../../assets/images/Buttons/Grange Shop Button.png')}
+            imageUri={require('../../../assets/images/Buttons/shop button for homepage.png')}
           />
 
           <Text
