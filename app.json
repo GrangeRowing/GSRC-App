@@ -1,5 +1,6 @@
 {
   "expo": {
+    "entryPoint": "./app/index.js",
     "name": "GSRC-App",
     "slug": "GSRC-App",
     "version": "1.0.0",

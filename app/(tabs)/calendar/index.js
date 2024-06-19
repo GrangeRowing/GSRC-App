@@ -3,25 +3,11 @@ import { View, Button, Alert } from 'react-native';
 import { useGoogleAuth, getGoogleCalendarEvents } from '../../../GoogleCalendarService';
 import { CalendarList } from 'react-native-calendars';
 
-interface CalendarEvent {
-  start: {
-    date?: string;
-    dateTime?: string;
-  };
-  summary: string;
-}
 
-interface DateObject {
-  dateString: string;
-  day: number;
-  month: number;
-  year: number;
-  timestamp: number;
-}
 
-const CalendarPage: React.FC = () => {
+const CalendarPage = () => {
   const { request, response, promptAsync } = useGoogleAuth();
-  const [events, setEvents] = useState<CalendarEvent[]>([]);
+  const [events, setEvents] = useState([]);
 
   useEffect(() => {
     if (response?.type === 'success' && response.authentication) {
@@ -30,7 +16,7 @@ const CalendarPage: React.FC = () => {
     }
   }, [response]);
 
-  const fetchEvents = async (accessToken: string) => {
+  const fetchEvents = async () => {
     try {
       const events = await getGoogleCalendarEvents(accessToken);
       setEvents(events);
@@ -40,9 +26,9 @@ const CalendarPage: React.FC = () => {
   };
 
   const formatEventsForCalendar = () => {
-    const formattedEvents: { [key: string]: { marked: boolean; dots: { color: string }[] } } = {};
+    const formattedEvents = {};
     events.forEach((event) => {
-      const date = event.start.date || event.start.dateTime!.split('T')[0];
+      const date = event.start.date || event.start.dateTime.split('T')[0];
       if (!formattedEvents[date]) {
         formattedEvents[date] = { marked: true, dots: [{ color: 'blue' }] };
       }
@@ -57,8 +43,8 @@ const CalendarPage: React.FC = () => {
         <CalendarList
           markingType={'multi-dot'}
           markedDates={formatEventsForCalendar()}
-          onDayPress={(day: DateObject) => {
-            const dayEvents = events.filter(event => event.start.date === day.dateString || event.start.dateTime!.startsWith(day.dateString));
+          onDayPress={(day) => {
+            const dayEvents = events.filter(event => event.start.date === day.dateString || event.start.dateTime.startsWith(day.dateString));
             Alert.alert('Events', dayEvents.map(event => event.summary).join('\n'));
           }}
         />

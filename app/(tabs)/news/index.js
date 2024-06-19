@@ -23,7 +23,7 @@ import { opacity } from 'react-native-reanimated/lib/typescript/reanimated2/Colo
 const { width, height } = Dimensions.get('window');
 const idealMargin = (width * 0.05) / 2
 
-function Pressable(props: any) {
+function Pressable(props) {
   return <PressableRaw
           onPress={props.onPress}
           hitSlop={props.hitSlop}
@@ -124,8 +124,9 @@ export default function Index() {
           </Text>
 
           <Button
-          url={'https://www.grangerowing.com/shop-4'}
-          imageUri={require('../../../assets/images/Buttons/shop button for homepage.png')}/>
+          url={'https://grangerowing.com/'}
+          imageUri={require('../../../assets/images/Buttons/Grange Shop Button.png')}
+          />
 
           <Text
           style={{
@@ -222,7 +223,7 @@ export default function Index() {
             </PressableRaw>
             <PressableRaw style={{marginRight: 100}}>
               <ButtonScroll 
-              url={'https://www.grangerowing.com/volunteer-support'}
+              url={'https://grangerowing.com'}
               imageUri={require('../../../assets/images/Buttons/Parents association button.png')}
               buttonHeight={110}
               buttonWidth={ ((width - (2 * (width * 0.2))) / 2) }

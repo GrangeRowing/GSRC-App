@@ -23,7 +23,7 @@ import { opacity } from 'react-native-reanimated/lib/typescript/reanimated2/Colo
 const { width, height } = Dimensions.get('window');
 const idealMargin = (width * 0.05) / 2
 
-function Pressable(props: any) {
+function Pressable() {
   return <PressableRaw
           onPress={props.onPress}
           hitSlop={props.hitSlop}

@@ -5,11 +5,7 @@ import {
 } from 'react-native';
 
 
-interface Properties {
-    imageUri: any,
-}
-
-export default function category({imageUri}: Properties) {
+export default function category(imageUri) {
   return (
     <>
         <View style={{

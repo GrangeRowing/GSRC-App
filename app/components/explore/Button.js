@@ -8,7 +8,7 @@ import {
   Pressable as PressableRaw
 } from 'react-native';
 
-function Pressable(props: any) {
+function Pressable() {
     return <PressableRaw
             onPress={props.onPress}
             hitSlop={props.hitSlop}
@@ -21,12 +21,7 @@ const idealWidth = width - (2 * (width * 0.05))
 
 
 
-interface Properties {
-    imageUri: any,
-    url: string
-}
-
-export default function Button({url, imageUri}: Properties) {
+export default function Button(url, imageUri) {
     return (
         <View style={{
         marginVertical: Platform.OS == 'ios' ? '0%' : '2%',

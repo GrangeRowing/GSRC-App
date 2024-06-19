@@ -7,13 +7,7 @@ import {
 } from 'react-native';
 import {useFonts, Lato_300Light} from '@expo-google-fonts/lato';
 
-
-interface Properties {
-    imageUri: any,
-    name: string
-}
-
-export default function category({imageUri, name}: Properties) {
+export default function category(imageUri, name) {
   let [fontsLoaded, fontError] = useFonts({
     Lato_300Light
   });

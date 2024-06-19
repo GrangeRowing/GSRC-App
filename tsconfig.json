@@ -1,17 +1,23 @@
 {
-  "extends": "expo/tsconfig.base",
   "compilerOptions": {
-    "strict": true,
-    "paths": {
-      "@/*": [
-        "./*"
-      ]
-    }
+    "allowJs": true, // Allow JavaScript files
+    "checkJs": true, // Enable type checking for JavaScript files
+    "noEmit": true, // Prevent TypeScript from emitting output files
+    "skipLibCheck": true, // Skip type checking of declaration files
+    "target": "es6", // Set the JavaScript language version for emitted JavaScript and included library declarations
+    "moduleResolution": "node", // Determine how module imports are resolved
+    "allowSyntheticDefaultImports": true,
+    "jsx": "react",
+    "module": "commonjs",
+    "typeRoots": ["node_modules/@types", "./types"]
   },
   "include": [
-    "**/*.ts",
-    "**/*.tsx",
-    ".expo/types/**/*.ts",
-    "expo-env.d.ts"
+    "**/*.js",
+    "**/*.jsx",
+    "types",
+    "declaration.d.ts"
+  ],
+  "exclude": [
+    "node_modules"
   ]
 }
